@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <router-view />
+  <main></main>
 </template>
 
 <style lang="scss">

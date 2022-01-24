@@ -1,6 +1,6 @@
 import express from "express";
 
-import Work from "../models/work";
+import Work from "../models/Work";
 
 const router = express.Router();
 
