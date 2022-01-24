@@ -1,0 +1,15 @@
+.from-left-enter-active {
+  animation: fromLeft 0.4s ease-out;
+}
+.from-left-leave-active {
+  animation: fromLeft 0.4s ease-out reverse;
+}
+
+@keyframes fromLeft {
+  from {
+    transform: translateX(500px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}

@@ -5,9 +5,45 @@ $lg: 992px;
 $xl: 1200px;
 $xxl: 1400px;
 
-// COLORS
-$white: #ffffff;
-
 // FONTS
-$sserif: sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap");
+
+$sserif: "Open Sans", sans-serif;
 $serif: serif;
+
+$themes: (
+  dark: (
+    primary: #242424,
+    secondary: #ffffff,
+    primary-nav: rgba(45, 45, 45, 0.5),
+  ),
+  light: (
+    primary: #ffffff,
+    secondary: #242424,
+    primary-nav: rgba(243, 243, 243, 0.5),
+  ),
+);
+
+@mixin themify($themes: $themes) {
+  @each $theme, $map in $themes {
+    .theme-#{$theme} & {
+      $theme-map: () !global;
+      @each $key, $submap in $map {
+        $value: map-get(map-get($themes, $theme), "#{$key}");
+        $theme-map: map-merge(
+          $theme-map,
+          (
+            $key: $value,
+          )
+        ) !global;
+      }
+
+      @content;
+      $theme-map: null !global;
+    }
+  }
+}
+
+@function themed($key) {
+  @return map-get($theme-map, $key);
+}
