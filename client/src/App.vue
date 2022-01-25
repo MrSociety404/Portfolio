@@ -7,6 +7,7 @@ onBeforeMount(() => {
   const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
   if (isDarkMode) {
     html.className = 'theme-dark'
+    localStorage.setItem('isDark', true)
   } else {
     html.className = 'theme-light'
   }

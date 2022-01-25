@@ -5,11 +5,39 @@
   animation: fromLeft 0.4s ease-out reverse;
 }
 
+.change-text-enter-active {
+  animation: appearFromTopSmall 0.3s ease-out 0.3s;
+}
+.change-text-leave-active {
+  animation: appearFromBottomSmall 0.3s ease-out reverse;
+}
+
 @keyframes fromLeft {
   from {
     transform: translateX(500px);
   }
   to {
     transform: translateX(0);
+  }
+}
+
+@keyframes appearFromTopSmall {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes appearFromBottomSmall {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }

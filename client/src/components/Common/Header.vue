@@ -36,11 +36,12 @@ const toggleNav = () => {
   &__title {
     font-weight: 500;
     position: absolute;
-    z-index: 999;
+    z-index: 9999;
   }
   &__box {
     font-weight: 300;
     cursor: pointer;
+    user-select: none;
     &-legend {
       margin-right: 30px;
       @media (max-width: $sm) {
