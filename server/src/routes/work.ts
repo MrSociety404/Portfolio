@@ -7,7 +7,7 @@ const router = express.Router();
 // Get all works
 router.get("/", async (req, res) => {
   try {
-    const works = await Work.find();
+    const works = await Work.find({}).select("title preview uniqueName status");
     res.status(200).json(works);
   } catch (err) {
     res.status(500).json({ message: err });

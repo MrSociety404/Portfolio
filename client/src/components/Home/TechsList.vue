@@ -30,7 +30,7 @@ const techs = ref(await getTechs())
     align-items: center;
     justify-content: space-between;
     width: 50%;
-    gap: 2rem;
+    gap: 3rem;
     @media (max-width: $lg) {
       width: 80%;
     }
