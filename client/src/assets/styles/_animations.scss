@@ -41,3 +41,15 @@
     opacity: 1;
   }
 }
+
+@keyframes pulse-bg {
+  0% {
+    background-color: #eee;
+  }
+  50% {
+    background-color: #cccccc;
+  }
+  100% {
+    background-color: #eee;
+  }
+}

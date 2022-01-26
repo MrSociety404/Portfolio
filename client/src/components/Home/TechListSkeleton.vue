@@ -28,15 +28,4 @@
     animation: pulse-bg 1s infinite;
   }
 }
-@keyframes pulse-bg {
-  0% {
-    background-color: #eee;
-  }
-  50% {
-    background-color: #cccccc;
-  }
-  100% {
-    background-color: #eee;
-  }
-}
 </style>

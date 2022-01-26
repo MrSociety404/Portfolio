@@ -7,6 +7,7 @@ import mongoose from "mongoose";
 // Import routes
 import workRoutes from "./routes/work";
 import technologyRoutes from "./routes/technology";
+import path from "path";
 
 // Load env variables
 dotenv.config();
@@ -26,6 +27,11 @@ mongoose
     // Select route
     app.use("/api/work", workRoutes);
     app.use("/api/techs", technologyRoutes);
+
+    // Acces to upload folder
+    app.get("/uploads/:name", (req, res) => {
+      res.sendFile(path.join(__dirname, `../uploads/${req.params.name}`));
+    });
 
     // If wrong path, send error
     app.get("*", (req, res) => {

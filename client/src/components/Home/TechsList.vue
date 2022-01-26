@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from "vue";
 import { getTechs } from "../../features/query";
+import { SERVER_URL } from "../../features/config";
 
 const techs = ref(await getTechs())
 
@@ -10,7 +11,11 @@ const techs = ref(await getTechs())
   <ul class="techs__list">
     <li class="techs__item" v-for="tech in techs" :key="tech.id">
       <a :href="tech.website" class="techs__link">
-        <img :src="tech.icon.url" class="techs__logo" :alt="tech.icon.alternativeText" />
+        <img
+          :src="`${SERVER_URL}${tech.icon.url}`"
+          class="techs__logo"
+          :alt="tech.icon.alternativeText"
+        />
         <span class="techs__name">{{ tech.name }}</span>
       </a>
     </li>
@@ -40,6 +45,7 @@ const techs = ref(await getTechs())
     display: flex;
     gap: 3rem;
     align-items: center;
+    justify-content: flex-end;
     @media (max-width: $lg) {
       justify-content: center;
     }
