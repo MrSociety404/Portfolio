@@ -20,6 +20,7 @@ defineProps(['content', 'inverted'])
   text-align: center;
   cursor: pointer;
   transition: all 0.2s ease;
+  transform-origin: center;
   @media (max-width: $md) {
     font-size: 1rem;
   }
@@ -34,6 +35,9 @@ defineProps(['content', 'inverted'])
       background-color: themed("primary");
       color: themed("secondary");
     }
+  }
+  &:hover {
+    transform: scale(1.025);
   }
 }
 </style>

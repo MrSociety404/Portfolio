@@ -8,8 +8,12 @@ import JavaScript from "../../assets/svg/javascript.svg"
     <div class="homeIntro__container">
       <h3 class="homeIntro__name">Fabrice Castrogiovanni</h3>
       <h1 class="homeIntro__title">
-        <span>JUNIOR FULL STACK</span>
-        <span>WEB DEVELOPER</span>
+        <span class="homeIntro__title-container">
+          <span class="homeIntro__title-content">JUNIOR FULL STACK</span>
+        </span>
+        <span class="homeIntro__title-container">
+          <span class="homeIntro__title-content">WEB DEVELOPER</span>
+        </span>
       </h1>
     </div>
     <div class="homeIntro__float vue">
@@ -36,8 +40,10 @@ import JavaScript from "../../assets/svg/javascript.svg"
     position: absolute;
     border-radius: 50%;
     &.vue {
+      animation: bounce 8s ease-in infinite;
       top: 200px;
       right: 150px;
+      z-index: -1;
       & div::after {
         width: 100px;
         background-color: rgba(65, 184, 131, 0.4);
@@ -68,6 +74,8 @@ import JavaScript from "../../assets/svg/javascript.svg"
     &.js {
       bottom: 100px;
       left: 60px;
+      z-index: -1;
+      animation: bounce 6s ease-in infinite 1s;
       & div::after {
         width: 100px;
         background-color: rgba(245, 222, 25, 0.3);
@@ -118,6 +126,7 @@ import JavaScript from "../../assets/svg/javascript.svg"
   &__name {
     font-size: 2.25rem;
     margin-bottom: 1rem;
+    animation: appearFromBottomSmall 1s ease-out;
     @media (max-width: $md) {
       font-size: 1.5rem;
     }
@@ -129,7 +138,6 @@ import JavaScript from "../../assets/svg/javascript.svg"
     font-size: 6rem;
     font-weight: 500;
     width: 100%;
-    overflow: hidden;
     @media (max-width: $lg) {
       font-size: 4rem;
     }
@@ -139,11 +147,23 @@ import JavaScript from "../../assets/svg/javascript.svg"
     @media (max-width: $sm) {
       font-size: 1.8rem;
     }
-    & span {
+    &-container {
       display: block;
+      overflow: hidden;
       &:last-child {
         text-align: right;
+        .homeIntro__title-content {
+          animation: appearFromBottom 1.5s ease-out;
+        }
       }
+      &:first-child {
+        .homeIntro__title-content {
+          animation: appearFromBottom 1s ease-out;
+        }
+      }
+    }
+    &-content {
+      display: block;
     }
   }
 }

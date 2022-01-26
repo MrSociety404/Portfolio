@@ -9,3 +9,12 @@ export const switchTheme = (isDark) => {
     localStorage.setItem("isDark", false);
   }
 };
+
+export const inViewPort = (entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("is-inViewport");
+      observer.disconnect();
+    }
+  });
+};

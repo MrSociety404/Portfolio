@@ -32,12 +32,20 @@ defineProps({
       <p class="footer__info">© 2022| All Rights Reserved.</p>
       <ul class="footer__list">
         <li class="footer__item">
-          <a href="https://github.com/MrSociety404" class="footer_link">
+          <a
+            href="https://github.com/MrSociety404"
+            class="footer_link"
+            aria-label="my github profile"
+          >
             <Github />
           </a>
         </li>
         <li class="footer__item">
-          <a href="https://www.linkedin.com/in/fabrice-cst-29878821b/" class="footer_link">
+          <a
+            href="https://www.linkedin.com/in/fabrice-cst-29878821b/"
+            class="footer_link"
+            aria-label="my linkedin profile"
+          >
             <Linkedin />
           </a>
         </li>
