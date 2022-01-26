@@ -4,12 +4,17 @@ import Header from './components/Common/Header.vue';
 
 onBeforeMount(() => {
   const html = document.querySelector('html')
+  const selectedTheme = localStorage.getItem('isDark')
   const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-  if (isDarkMode) {
-    html.className = 'theme-dark'
-    localStorage.setItem('isDark', true)
+  if (selectedTheme) {
+    html.className = selectedTheme === "true" ? 'theme-dark' : 'theme-light';
   } else {
-    html.className = 'theme-light'
+    if (isDarkMode) {
+      html.className = 'theme-dark'
+      localStorage.setItem('isDark', true)
+    } else {
+      html.className = 'theme-light'
+    }
   }
 })
 

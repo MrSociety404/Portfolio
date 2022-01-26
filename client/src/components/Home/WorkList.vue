@@ -1,14 +1,15 @@
 <script setup>
+import { ref } from 'vue';
+import { getWorks } from '../../features/query';
 import Work from './Work.vue';
+
+const works = ref(await getWorks())
 
 </script>
 
 <template>
   <ul class="homeWorkList">
-    <Work />
-    <Work />
-    <Work />
-    <Work />
+    <Work v-for="work in works" :key="work.id" :work="work" />
   </ul>
 </template>
 

@@ -1,6 +1,7 @@
 <script setup>
 import WorkList from './WorkList.vue';
 import Button from '../Common/Button.vue';
+import WorkListSkeleton from './WorkListSkeleton.vue';
 
 </script>
 
@@ -11,7 +12,9 @@ import Button from '../Common/Button.vue';
       <template #default>
         <WorkList />
       </template>
-      <template #fallback>loading</template>
+      <template #fallback>
+        <WorkListSkeleton />
+      </template>
     </Suspense>
     <Button
       class="selectedWorks__button"
@@ -25,10 +28,13 @@ import Button from '../Common/Button.vue';
 .selectedWorks {
   margin-bottom: 10rem;
   &__title {
-    font-size: 2.25rem;
-    text-align: center;
+    font-size: 3.5rem;
     margin-bottom: 4rem;
     @media (max-width: $md) {
+      font-size: 2.5rem;
+      text-align: center;
+    }
+    @media (max-width: $sm) {
       font-size: 1.8rem;
     }
   }

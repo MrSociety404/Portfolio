@@ -8,6 +8,10 @@ const workSchema = new Schema({
     required: true,
     trim: true,
   },
+  uniqueName: {
+    type: String,
+    unique: true,
+  },
   status: {
     type: String,
     required: true,
@@ -52,6 +56,10 @@ const workSchema = new Schema({
     },
   ],
   createdAt: { type: Date, default: Date.now },
+  selected: {
+    type: Boolean,
+    default: false,
+  },
 });
 
 export default mongoose.model("Work", workSchema);

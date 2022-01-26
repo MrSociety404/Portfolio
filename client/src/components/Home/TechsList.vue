@@ -37,6 +37,7 @@ const techs = ref(await getTechs())
   }
   &__item {
     flex-basis: calc(50% - 2rem);
+    overflow: hidden;
     @media (max-width: $md) {
       flex-basis: 100%;
     }

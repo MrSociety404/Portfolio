@@ -1,22 +1,31 @@
 <script setup>
 import ArrowRight from "../../assets/svg/arrowRight.svg"
+import { SERVER_URL } from "../../features/config";
+
+defineProps({
+  work: {
+    type: Object,
+    require: true
+  }
+})
+
 </script>
 
 <template>
   <li class="homeWorkCard">
-    <router-link to="/project/sdqsd" class="homeWorkCard-link">
+    <router-link :to="`/project/${work.uniqueName}`" class="homeWorkCard-link">
       <img
-        src="https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80"
-        alt
+        :src="SERVER_URL + work.preview.url"
+        :alt="work.preview.alternativeText"
         class="homeWorkCard__image"
       />
       <div class="homeWorkCard__container">
-        <h3 class="homeWorkCard__name">Project Name</h3>
+        <h3 class="homeWorkCard__name">{{ work.title }}</h3>
         <div class="homeWorkCard__arrow">
           <ArrowRight />
         </div>
       </div>
-      <p class="homeWorkCard__role">Developement</p>
+      <p class="homeWorkCard__role">{{ work.status }}</p>
     </router-link>
   </li>
 </template>
@@ -50,6 +59,8 @@ import ArrowRight from "../../assets/svg/arrowRight.svg"
     object-fit: cover;
     margin-bottom: 2rem;
     transition: transform 0.4s ease;
+    max-height: 400px;
+    width: 100%;
   }
   &__container {
     display: flex;
