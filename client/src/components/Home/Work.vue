@@ -23,21 +23,11 @@ import ArrowRight from "../../assets/svg/arrowRight.svg"
 
 <style lang="scss">
 .homeWorkCard {
-  flex-basis: calc(50% - 2rem);
+  flex-basis: calc(48% - 2rem);
   margin-bottom: 6rem;
   position: relative;
   @media (max-width: $md) {
     margin-bottom: 2rem;
-  }
-  &:nth-child(2) {
-    .homeWorkCard__image {
-      height: 450px;
-    }
-  }
-  &:nth-child(3) {
-    .homeWorkCard__image {
-      height: 450px;
-    }
   }
   &:nth-child(4) {
     align-self: flex-start;

@@ -8,7 +8,7 @@ import Button from '../Common/Button.vue';
     <p
       class="homeAbout__text"
     >I have the chance to work by passion and create awesome web application for my clients</p>
-    <Button content="ABOUT ME" class="homeAbout__button" @click="$router.push('/about')" />
+    <Button content="About me" class="homeAbout__button" @click="$router.push('/about')" />
   </section>
 </template>
 

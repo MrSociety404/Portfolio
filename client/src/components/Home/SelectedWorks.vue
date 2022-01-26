@@ -15,7 +15,7 @@ import Button from '../Common/Button.vue';
     </Suspense>
     <Button
       class="selectedWorks__button"
-      content="CHECKOUT MORE WORKS"
+      content="Checkout more works"
       @click="$router.push('/works')"
     />
   </section>
