@@ -13,7 +13,7 @@ defineProps(['content', 'inverted'])
     color: themed("primary");
   }
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   border-radius: 5px;
   padding: 0.8rem 4rem;
   display: block;
@@ -21,10 +21,9 @@ defineProps(['content', 'inverted'])
   cursor: pointer;
   transition: all 0.2s ease;
   @media (max-width: $md) {
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
   @media (max-width: $sm) {
-    font-size: 1rem;
     padding: 0.8rem 3rem;
   }
   &:active {

@@ -10,108 +10,78 @@ import ArrowRight from "../../assets/svg/arrowRight.svg"
         alt
         class="homeWorkCard__image"
       />
-      <router-link to="/project/sqdqsd" class="homeWorkCard__cursor">Checkout details</router-link>
       <div class="homeWorkCard__container">
-        <div class="homeWorkCard__info">
-          <h3>Project Name</h3>
-          <span>Development</span>
-        </div>
+        <h3 class="homeWorkCard__name">Project Name</h3>
         <div class="homeWorkCard__arrow">
           <ArrowRight />
         </div>
       </div>
+      <p class="homeWorkCard__role">Developement</p>
     </router-link>
   </li>
 </template>
 
 <style lang="scss">
 .homeWorkCard {
-  width: 100%;
-  height: 400px;
+  flex-basis: calc(50% - 2rem);
+  margin-bottom: 6rem;
   position: relative;
-  @media (max-width: $sm) {
-    height: 280px;
+  @media (max-width: $md) {
+    margin-bottom: 2rem;
   }
-  &:hover .homeWorkCard__arrow {
-    @include themify($themes) {
-      background-color: themed("secondary");
-      & svg {
-        color: themed("primary");
-        transform: rotate(-45deg);
+  &:nth-child(2) {
+    .homeWorkCard__image {
+      height: 450px;
+    }
+  }
+  &:nth-child(3) {
+    .homeWorkCard__image {
+      height: 450px;
+    }
+  }
+  &:nth-child(4) {
+    align-self: flex-start;
+  }
+  &:hover {
+    .homeWorkCard__arrow {
+      @include themify($themes) {
+        background-color: themed("secondary");
+        & svg {
+          color: themed("primary");
+          transform: rotate(-45deg);
+        }
       }
+    }
+    .homeWorkCard__image {
+      transform: scale(0.98);
     }
   }
   &__image {
-    width: 100%;
-    height: 300px;
     object-fit: cover;
-    @media (max-width: $sm) {
-      height: 200px;
-    }
-    &:hover ~ .homeWorkCard__cursor {
-      opacity: 1;
-    }
-  }
-  &__cursor {
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    left: 0;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-weight: 500;
-    font-size: 0.8rem;
-    @include themify($themes) {
-      background-color: themed("secondary");
-      color: themed("primary");
-    }
-    transition: opacity 0.2s ease;
+    margin-bottom: 2rem;
+    transition: transform 0.4s ease;
   }
   &__container {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
     gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
   }
-  &__info {
-    margin-block: 0.3rem;
-    & h3 {
-      font-size: 1.4rem;
-      font-weight: 500;
-      margin-bottom: 0.4rem;
-      @media (max-width: $sm) {
-        font-size: 1.1rem;
-      }
-    }
-    & span {
-      font-weight: 300;
-      font-size: 1.1rem;
-      @media (max-width: $sm) {
-        font-size: 1rem;
-      }
-    }
+  &__name {
+    font-size: 2rem;
   }
   &__arrow {
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
-    width: 70px;
-    height: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background-color 0.4s ease;
-    @media (max-width: $sm) {
-      width: 40px;
-      height: 40px;
-    }
+    transition: background-color 0.2s ease;
     & svg {
-      width: 50%;
-      transform-origin: center;
-      transition: color 0.2s ease, transform 0.6s ease;
+      transition: transform 0.4s ease;
+      width: 60%;
     }
   }
 }

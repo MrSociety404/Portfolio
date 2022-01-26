@@ -6,7 +6,7 @@ import mongoose from "mongoose";
 
 // Import routes
 import workRoutes from "./routes/work";
-import technolohyRoutes from "./routes/technology";
+import technologyRoutes from "./routes/technology";
 
 // Load env variables
 dotenv.config();
@@ -25,7 +25,7 @@ mongoose
 
     // Select route
     app.use("/api/work", workRoutes);
-    app.use("/api/techs", technolohyRoutes);
+    app.use("/api/techs", technologyRoutes);
 
     // If wrong path, send error
     app.get("*", (req, res) => {

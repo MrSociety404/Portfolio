@@ -28,6 +28,9 @@ import Button from '../Common/Button.vue';
     font-size: 2.25rem;
     text-align: center;
     margin-bottom: 4rem;
+    @media (max-width: $md) {
+      font-size: 1.8rem;
+    }
   }
   &__button {
     margin: 0 auto;

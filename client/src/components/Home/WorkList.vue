@@ -15,11 +15,12 @@ import Work from './Work.vue';
 <style lang="scss">
 .homeWorkList {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: space-between;
+  align-items: flex-end;
   flex-wrap: wrap;
-  gap: 4rem;
   margin-bottom: 4rem;
+  @media (max-width: $md) {
+    display: block;
+  }
 }
 </style>
