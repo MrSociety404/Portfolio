@@ -13,7 +13,7 @@ export const getTechs = async () => {
  * Fetch all the technologies from the API
  * @returns Array of object contains technology info
  */
-export const getWorks = async () => {
-  const { data } = await axios.get("work");
+export const getWorks = async (limit) => {
+  const { data } = await axios.get(`work${limit ? "?limit=" + limit : ""}`);
   return data;
 };
