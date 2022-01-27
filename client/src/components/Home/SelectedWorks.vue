@@ -46,8 +46,10 @@ onMounted(() => {
     overflow: hidden;
     & span {
       display: block;
+      opacity: 0;
       &.is-inViewport {
         animation: appearFromBottom 1s ease;
+        opacity: 1;
       }
     }
     @media (max-width: $md) {

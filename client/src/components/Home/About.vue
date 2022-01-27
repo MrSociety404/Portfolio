@@ -15,7 +15,7 @@ import Button from '../Common/Button.vue';
 <style lang="scss">
 .homeAbout {
   text-align: center;
-  margin-bottom: 9rem;
+  margin-bottom: 20rem;
   &__text {
     max-width: 700px;
     margin: 0 auto 4rem auto;

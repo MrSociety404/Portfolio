@@ -1,14 +1,21 @@
 <script setup>
-import { ref } from "vue";
+import { onMounted, ref } from "vue";
 import { getTechs } from "../../features/query";
 import { SERVER_URL } from "../../features/config";
+import { listInViewPort } from "../../features/utils";
+
+const list = ref(null)
+onMounted(() => {
+  const Obs = new IntersectionObserver(listInViewPort)
+  Obs.observe(list.value, {})
+})
 
 const techs = ref(await getTechs())
 
 </script>
 
 <template>
-  <ul class="techs__list">
+  <ul class="techs__list" ref="list">
     <li class="techs__item" v-for="tech in techs" :key="tech.id">
       <a :href="tech.website" class="techs__link">
         <img
@@ -47,8 +54,13 @@ const techs = ref(await getTechs())
     gap: 3rem;
     align-items: center;
     justify-content: flex-end;
+    opacity: 0;
     @media (max-width: $lg) {
       justify-content: center;
+    }
+    &.isInViewPort {
+      animation: appearFromBottomSmall 1s ease-out;
+      opacity: 1;
     }
   }
   &__logo {

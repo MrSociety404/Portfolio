@@ -13,7 +13,7 @@ const toggleNav = () => {
 
 <template>
   <header class="header">
-    <h2 class="header__title">Fabrice Cst</h2>
+    <h2 class="header__title" @click="$router.push('/')">Fabrice Cst</h2>
     <div></div>
     <div class="header__box" @click="toggleNav()">
       <span class="header__box-legend">menu</span>
@@ -37,6 +37,7 @@ const toggleNav = () => {
     font-weight: 500;
     position: absolute;
     z-index: 9999;
+    cursor: pointer;
   }
   &__box {
     font-weight: 300;

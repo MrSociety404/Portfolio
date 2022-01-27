@@ -63,7 +63,6 @@ textarea {
   @include themify($themes) {
     background-color: themed("secondary");
   }
-  border-radius: 15px;
 }
 
 /* Handle on hover */
@@ -71,7 +70,6 @@ textarea {
   @include themify($themes) {
     background-color: themed("secondary");
   }
-  border-radius: 15px;
 }
 
 a {

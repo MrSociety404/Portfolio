@@ -35,7 +35,7 @@ import JavaScript from "../../assets/svg/javascript.svg"
   display: flex;
   align-items: center;
   position: relative;
-  margin-bottom: 10rem;
+  margin-bottom: 20rem;
   &__float {
     position: absolute;
     border-radius: 50%;
