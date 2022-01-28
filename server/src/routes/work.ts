@@ -24,9 +24,9 @@ router.get("/", async (req, res) => {
 });
 
 // Find work by ID
-router.get("/:id", async (req, res) => {
+router.get("/:name", async (req, res) => {
   try {
-    const work = await Work.findById(req.params.id);
+    const work = await Work.findOne({ uniqueName: req.params.name });
     if (work === null) {
       res.status(404).json({ message: "Cannot find car" });
     } else {
