@@ -51,6 +51,9 @@ import TechListSkeleton from './TechListSkeleton.vue';
     @media (max-width: $lg) {
       margin-bottom: 2rem;
     }
+    @media (max-width: $md) {
+      font-size: 2rem;
+    }
   }
   &__desc {
     font-size: 1rem;

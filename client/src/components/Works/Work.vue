@@ -1,5 +1,7 @@
 <script setup>
+import { onMounted, ref } from "@vue/runtime-core"
 import { SERVER_URL } from "../../features/config"
+import simpleParallax from 'simple-parallax-js';
 
 defineProps({
   work: {
@@ -7,16 +9,24 @@ defineProps({
     required: true
   }
 })
+
+const image = ref(null)
+
+onMounted(() => {
+  new simpleParallax(image.value);
+})
+
 </script>
 
 <template>
-  <li class="work">
+  <div class="work">
     <router-link :to="`/project/${work.uniqueName}`" class="work__link">
       <div class="work__imageContainer">
         <img
           :src="SERVER_URL + work.preview.urlPortrait"
           :alt="work.preview.alternativeText"
           class="work__image"
+          ref="image"
         />
       </div>
       <p class="work__details">
@@ -24,34 +34,48 @@ defineProps({
         - {{ work.shortDescription }}
       </p>
     </router-link>
-  </li>
+  </div>
 </template>
 
 <style lang="scss">
 .work {
-  flex-basis: calc(50% - 4rem);
+  flex-basis: calc(50% - 2rem);
+  @media (max-width: $md) {
+    flex-basis: 100%;
+    width: 100%;
+  }
   &__imageContainer {
-    height: 1000px;
-    margin-bottom: 3rem;
+    max-height: 1000px;
     transform-origin: center;
     transition: transform 0.4s ease-out;
+    display: block;
+    @media (max-width: $md) {
+      width: 100%;
+      height: 60vw;
+      margin-bottom: 1.5rem;
+    }
   }
   &__image {
-    object-fit: cover;
     height: 100%;
+    object-fit: cover;
+    @media (max-width: $md) {
+      width: 100%;
+      height: 60vw;
+    }
   }
   &__details {
     text-align: center;
     font-size: 1.5rem;
     max-width: 80%;
     font-weight: 300;
-    margin-inline: auto;
+    margin: 5rem auto;
+    /* padding-bottom: 2rem; */
+    @media (max-width: $md) {
+      font-size: 1.5rem;
+    }
   }
   &__name {
     font-weight: bold;
-  }
-  &:nth-child(even) {
-    margin-top: 15rem;
   }
   &:hover {
     .work__imageContainer {

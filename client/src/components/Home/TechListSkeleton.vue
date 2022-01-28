@@ -4,8 +4,8 @@
 
 <template>
   <ul class="techs__list">
-    <li class="techs__item" v-for="i in 8">
-      <div href="#" class="techs__link">
+    <li class="techs__item" v-for="i in 4">
+      <div href="#" class="techs__linkSkeleton">
         <div class="techs__logoSkeleton" />
         <span class="techs__nameSkeleton"></span>
       </div>
@@ -15,6 +15,16 @@
 
 <style lang="scss">
 .techs {
+  &__linkSkeleton {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    justify-content: flex-end;
+    opacity: 1;
+    @media (max-width: $lg) {
+      justify-content: center;
+    }
+  }
   &__logoSkeleton {
     width: 50px;
     height: 50px;

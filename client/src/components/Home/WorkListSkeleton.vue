@@ -4,7 +4,7 @@
 
 <template>
   <ul class="homeWorkList">
-    <li class="homeWorkCard" v-for="i in 4">
+    <li class="homeWorkCard" v-for="i in 2">
       <div class="homeWorkCard-link">
         <div class="homeWorkCard__imageSkeleton" />
         <div class="homeWorkCard__container">
