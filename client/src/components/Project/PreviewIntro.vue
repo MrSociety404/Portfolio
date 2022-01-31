@@ -151,5 +151,10 @@ defineProps({
 .PreviewIntro {
   width: 600px;
   height: auto;
+  & #image0_204_622 {
+    object-fit: cover;
+    width: 1920px;
+    height: auto;
+  }
 }
 </style>

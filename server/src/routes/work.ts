@@ -28,7 +28,7 @@ router.get("/:name", async (req, res) => {
   try {
     const work = await Work.findOne({ uniqueName: req.params.name });
     if (work === null) {
-      res.status(404).json({ message: "Cannot find car" });
+      res.status(404).json({ message: "Cannot find Project" });
     } else {
       res.status(200).json(work);
     }

@@ -21,7 +21,14 @@ defineProps({
       </div>
       <div class="projectDesc__box">
         <span class="projectDesc__title">Project Date</span>
-        <span class="projectDesc__content">{{ info.date }}</span>
+        <span class="projectDesc__content">
+          {{
+            new Date(info.date).toLocaleDateString("en-US", {
+              year: "numeric",
+              month: 'short'
+            })
+          }}
+        </span>
       </div>
     </div>
   </section>
@@ -41,7 +48,10 @@ defineProps({
   }
   &__container {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    @media (max-width: $md) {
+      flex-direction: column;
+    }
   }
   &__box {
     margin-bottom: 2rem;
@@ -50,7 +60,7 @@ defineProps({
       margin-bottom: 1rem;
     }
     &:nth-child(1) {
-      flex-basis: 30%;
+      flex-basis: 40%;
     }
   }
   &__title {

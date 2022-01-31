@@ -1,10 +1,8 @@
 <script setup>
 import { ref, watchEffect } from 'vue';
-import work from '../../../../server/src/models/work';
 import { getWorks } from '../../features/query';
 
 import Work from './Work.vue';
-
 
 const works = ref(await getWorks())
 

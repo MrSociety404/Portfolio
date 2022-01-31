@@ -69,7 +69,6 @@ onMounted(() => {
     max-width: 80%;
     font-weight: 300;
     margin: 5rem auto;
-    /* padding-bottom: 2rem; */
     @media (max-width: $md) {
       font-size: 1.5rem;
     }

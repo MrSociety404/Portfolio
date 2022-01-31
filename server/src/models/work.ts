@@ -20,6 +20,7 @@ const workSchema = new Schema({
   preview: {
     url: String,
     urlPortrait: String,
+    urlProject: String,
     alternativeText: String,
     caption: String,
   },
