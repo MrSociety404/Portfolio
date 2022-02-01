@@ -28,6 +28,16 @@
   &__imageSkeleton {
     width: 100%;
     height: 280px;
+    background-image: linear-gradient(
+      90deg,
+      #eeeeee 0%,
+      #eeeeee 40%,
+      #dddddd 50%,
+      #dddddd 55%,
+      #eeeeee 65%,
+      #eeeeee 100%
+    );
+    background-size: 400%;
     animation: pulse-bg 1s infinite;
     margin-bottom: 1rem;
     border-radius: 5px;
@@ -35,6 +45,16 @@
   &__nameSkeleton {
     width: 200px;
     height: 35px;
+    background-image: linear-gradient(
+      90deg,
+      #eeeeee 0%,
+      #eeeeee 40%,
+      #dddddd 50%,
+      #dddddd 55%,
+      #eeeeee 65%,
+      #eeeeee 100%
+    );
+    background-size: 400%;
     animation: pulse-bg 1s infinite;
     border-radius: 5px;
   }

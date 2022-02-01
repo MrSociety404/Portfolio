@@ -28,13 +28,33 @@
   &__logoSkeleton {
     width: 50px;
     height: 50px;
-    animation: pulse-bg 1s infinite;
+    background-image: linear-gradient(
+      90deg,
+      #eeeeee 0%,
+      #eeeeee 40%,
+      #dddddd 50%,
+      #dddddd 55%,
+      #eeeeee 65%,
+      #eeeeee 100%
+    );
+    background-size: 400%;
+    animation: pulse-bg 1.5s infinite;
     border-radius: 5px;
   }
   &__nameSkeleton {
     width: 100px;
     height: 24px;
     border-radius: 5px;
+    background-image: linear-gradient(
+      90deg,
+      #eeeeee 0%,
+      #eeeeee 40%,
+      #dddddd 50%,
+      #dddddd 55%,
+      #eeeeee 65%,
+      #eeeeee 100%
+    );
+    background-size: 400%;
     animation: pulse-bg 1s infinite;
   }
 }

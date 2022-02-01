@@ -31,6 +31,16 @@
   &__imageSkeleton {
     height: 950px;
     width: 100%;
+    background-image: linear-gradient(
+      90deg,
+      #eeeeee 0%,
+      #eeeeee 40%,
+      #dddddd 50%,
+      #dddddd 55%,
+      #eeeeee 65%,
+      #eeeeee 100%
+    );
+    background-size: 400%;
     animation: pulse-bg 1s infinite;
     border-radius: 5px;
     @media (max-width: $md) {
@@ -40,6 +50,16 @@
   }
   &__detailsSkeleton {
     height: 2rem;
+    background-image: linear-gradient(
+      90deg,
+      #eeeeee 0%,
+      #eeeeee 40%,
+      #dddddd 50%,
+      #dddddd 55%,
+      #eeeeee 65%,
+      #eeeeee 100%
+    );
+    background-size: 400%;
     animation: pulse-bg 1s infinite;
     border-radius: 5px;
     max-width: 80%;
