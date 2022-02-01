@@ -8,11 +8,11 @@ import TechListSkeleton from './TechListSkeleton.vue';
 <template>
   <section class="techs">
     <div class="techs__container">
-      <h2 class="techs__title">My techs of the moments</h2>
+      <h2 class="techs__title">Mes technologies du moment</h2>
       <p
         class="techs__desc"
-      >Like I said, I'm learning a lot of technology. I keep them in mind and like to use some of them in my project</p>
-      <Button content="See exemples" class="techs__button" @click="$router.push('/works')" />
+      >J'adore découvrir beaucoup de technologies. Néanmoins, il viens un moment ou je dois en choisir quelqu'un pour mes projects. Ceux-ci sont certaine technologies que j'ai retenu</p>
+      <Button content="Voir des exemples" class="techs__button" @click="$router.push('/works')" />
     </div>
     <Suspense>
       <template #default>
@@ -35,7 +35,7 @@ import TechListSkeleton from './TechListSkeleton.vue';
     align-items: center;
   }
   &__container {
-    max-width: 32%;
+    max-width: 35%;
     @media (max-width: $lg) {
       max-width: 50%;
       text-align: center;

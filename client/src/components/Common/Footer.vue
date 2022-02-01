@@ -10,11 +10,11 @@ defineProps({
   },
   title: {
     type: String,
-    default: 'Have any idea?'
+    default: 'Vous avez une idée ?'
   },
   subtitle: {
     type: String,
-    default: 'Tell me about it'
+    default: 'Parlons en ensemble'
   }
 })
 </script>
@@ -26,10 +26,10 @@ defineProps({
         <h2 class="footer__title">{{ title }}</h2>
         <h3 class="footer__subtitle">{{ subtitle }}</h3>
       </div>
-      <Button :inverted="true" content="Contact me" @click="$router.push('contact')" />
+      <Button :inverted="true" content="Contactez moi" @click="$router.push('contact')" />
     </div>
     <div class="footer__container">
-      <p class="footer__info">© 2022| All Rights Reserved.</p>
+      <p class="footer__info">© 2022| Tous droits réservés.</p>
       <ul class="footer__list">
         <li class="footer__item">
           <a

@@ -11,7 +11,7 @@ defineProps({
 
 <template>
   <section class="projectPreviews">
-    <h2 class="projectInfo__title">Previews</h2>
+    <h2 class="projectInfo__title">Aperçus</h2>
     <div class="projectPreviews__previews">
       <img
         v-for="image in images"

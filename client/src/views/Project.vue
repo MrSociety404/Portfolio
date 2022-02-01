@@ -31,13 +31,13 @@ onBeforeMount(async () => {
   <main class="project" v-if="project">
     <Intro :title="project.title" :status="project.status" :preview="project.preview" />
     <Description :desc="project.description" :info="project.info" />
-    <Info title="My Role" :content="project.role" />
-    <Info title="What we used" :content="project.technology" />
-    <Info title="What I learn" :content="project.learning" />
+    <Info title="Role" :content="project.role" />
+    <Info title="Comment" :content="project.technology" />
+    <Info title="Appris" :content="project.learning" />
     <Previews :images="project.images" />
   </main>
   <main v-else class="projectLoad">Loading...</main>
-  <Footer extend title="Want to see" subtitle="your project here?" />
+  <Footer extend title="Envie de voir" subtitle="votre projet ici ?" />
 </template>
 
 <style lang="scss">

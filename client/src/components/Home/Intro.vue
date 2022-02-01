@@ -9,10 +9,10 @@ import JavaScript from "../../assets/svg/javascript.svg"
       <h3 class="homeIntro__name">Fabrice Castrogiovanni</h3>
       <h1 class="homeIntro__title">
         <span class="homeIntro__title-container">
-          <span class="homeIntro__title-content">JUNIOR FULL STACK</span>
+          <span class="homeIntro__title-content">DÉVELOPPEUR WEB</span>
         </span>
         <span class="homeIntro__title-container">
-          <span class="homeIntro__title-content">WEB DEVELOPER</span>
+          <span class="homeIntro__title-content">FULL STACK</span>
         </span>
       </h1>
     </div>

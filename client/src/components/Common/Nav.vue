@@ -25,17 +25,17 @@ watchEffect(() => {
           <ul class="nav__list">
             <li class="nav__item">
               <router-link to="/" @click="emit('closeNav')">
-                <span>HOME</span>
+                <span>ACCUEIL</span>
               </router-link>
             </li>
             <li class="nav__item">
               <router-link to="/works" @click="emit('closeNav')">
-                <span>WORKS</span>
+                <span>TRAVAUX</span>
               </router-link>
             </li>
             <li class="nav__item">
               <router-link to="/about" @click="emit('closeNav')">
-                <span>ABOUT</span>
+                <span>À PROPOS</span>
               </router-link>
             </li>
             <li class="nav__item">
@@ -50,8 +50,8 @@ watchEffect(() => {
             <Switch v-model="isDarkMode" />
             <div class="nav__settings-container">
               <transition name="change-text">
-                <span v-if="isDarkMode" class="nav__settings-theme">DARK</span>
-                <span v-else class="nav__settings-theme">LIGHT</span>
+                <span v-if="isDarkMode" class="nav__settings-theme">SOMBRE</span>
+                <span v-else class="nav__settings-theme">CLAIR</span>
               </transition>
             </div>
           </div>

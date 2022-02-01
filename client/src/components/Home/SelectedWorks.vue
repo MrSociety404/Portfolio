@@ -19,7 +19,7 @@ onMounted(() => {
 <template>
   <section class="selectedWorks">
     <h2 class="selectedWorks__title">
-      <span ref="title">Selected Projects</span>
+      <span ref="title">Projets Sélectionné</span>
     </h2>
     <Suspense>
       <template #default>
@@ -31,7 +31,7 @@ onMounted(() => {
     </Suspense>
     <Button
       class="selectedWorks__button"
-      content="Checkout more works"
+      content="Voir plus de projets"
       @click="$router.push('/works')"
     />
   </section>

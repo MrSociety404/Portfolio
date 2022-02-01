@@ -18,11 +18,7 @@ const techs = ref(await getTechs())
   <ul class="techs__list" ref="list">
     <li class="techs__item" v-for="tech in techs" :key="tech.id">
       <a :href="tech.website" class="techs__link">
-        <img
-          :src="`${SERVER_URL}${tech.icon.url}`"
-          class="techs__logo"
-          :alt="tech.icon.alternativeText"
-        />
+        <img :src="SERVER_URL + tech.icon.url" class="techs__logo" :alt="tech.icon.alternativeText" />
         <span class="techs__name">{{ tech.name }}</span>
       </a>
     </li>

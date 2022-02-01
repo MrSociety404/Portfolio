@@ -8,7 +8,7 @@ import WorkListSkeleton from '../components/Works/WorkListSkeleton.vue';
 <template>
   <main class="works">
     <h1 class="works__title">
-      <span>All my works</span>
+      <span>Tous mes travaux</span>
     </h1>
     <Suspense>
       <template #default>

@@ -16,14 +16,14 @@ defineProps({
     <p>{{ desc }}</p>
     <div class="projectDesc__container">
       <div class="projectDesc__box">
-        <span class="projectDesc__title">Website</span>
+        <span class="projectDesc__title">Site</span>
         <a :href="info.url" class="projectDesc__content">{{ info.url }}</a>
       </div>
       <div class="projectDesc__box">
-        <span class="projectDesc__title">Project Date</span>
+        <span class="projectDesc__title">Date du projet</span>
         <span class="projectDesc__content">
           {{
-            new Date(info.date).toLocaleDateString("en-US", {
+            new Date(info.date).toLocaleDateString("fr-FR", {
               year: "numeric",
               month: 'short'
             })

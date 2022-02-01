@@ -13,15 +13,15 @@ const userInput = ref({
 
 <template>
   <form @submit.prevent class="contact__form">
-    <h1 class="contact__title">Let's Talk</h1>
-    <p class="contact__desc">Enter your project details.</p>
+    <h1 class="contact__title">Parlons ensemble</h1>
+    <p class="contact__desc">Ecrivez moi votre message.</p>
     <div class="contact__box">
-      <Input label="Name" v-model="userInput.name" />
+      <Input label="Nom" v-model="userInput.name" />
       <Input label="Mail" v-model="userInput.mail" />
     </div>
     <TextArea v-model="userInput.message" />
     <div class="contact__controls">
-      <Button content="Submit" :inverted="true" />
+      <Button content="Envoyé" :inverted="true" />
       <a href="mailto:info@fabricecst.com" class="contact__mailLink">info@fabricecst.com</a>
     </div>
   </form>
