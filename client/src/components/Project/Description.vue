@@ -64,7 +64,7 @@ defineProps({
     }
   }
   &__title {
-    opacity: 0.5;
+    opacity: 0.8;
   }
   &__content {
     text-decoration: underline;

@@ -25,8 +25,15 @@ const alertMessage = ref({
 
 // Logic
 const sendMail = async () => {
-  const res = await axios.post('mailbox', userInput.value);
-  console.log(res);
+  try {
+    const res = await axios.post('mailbox', userInput.value);
+    alertMessage.value.message = 'Votre message à bien été envoyé !'
+    alertMessage.value.title = 'Message envoyé !'
+    alertMessage.value.error = false
+    alertMessage.value.isOpen = true
+  } catch (err) {
+    console.error(err);
+  }
 }
 
 const submit = () => {
@@ -52,11 +59,11 @@ const submit = () => {
     <p class="contact__desc">Ecrivez moi votre message.</p>
     <div class="contact__box">
       <Input label="Nom" v-model="userInput.name" />
-      <Input label="Mail" v-model="userInput.mail" />
+      <Input label="Mail" v-model="userInput.mail" type="email" />
     </div>
     <TextArea v-model="userInput.message" />
     <div class="contact__controls">
-      <Button content="Envoyé" :inverted="true" />
+      <Button content="Envoyer" :inverted="true" />
       <a href="mailto:info@fabricecst.com" class="contact__mailLink">info@fabricecst.com</a>
     </div>
   </form>

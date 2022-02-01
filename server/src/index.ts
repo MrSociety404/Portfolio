@@ -3,11 +3,12 @@ import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
+import path from "path";
 
 // Import routes
 import workRoutes from "./routes/work";
 import technologyRoutes from "./routes/technology";
-import path from "path";
+import mailRoutes from "./routes/mail";
 
 // Load env variables
 dotenv.config();
@@ -27,6 +28,7 @@ mongoose
     // Select route
     app.use("/api/work", workRoutes);
     app.use("/api/techs", technologyRoutes);
+    app.use("/api/mailbox", mailRoutes);
 
     // Acces to upload folder
     app.get("/uploads/:name", (req, res) => {

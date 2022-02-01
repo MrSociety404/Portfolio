@@ -13,7 +13,7 @@ import Why from '../components/About/Why.vue';
     <Values />
     <Who />
     <section class="aboutIllu">
-      <img src="../assets/images/about.jpg" alt="about" />
+      <img src="../assets/images/about.webp" alt="about" />
     </section>
     <Why />
   </main>

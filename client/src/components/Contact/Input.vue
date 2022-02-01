@@ -7,6 +7,10 @@ defineProps({
   modelValue: {
     type: [String, Number],
     default: ''
+  },
+  type: {
+    type: String,
+    default: 'text'
   }
 })
 </script>
@@ -18,6 +22,7 @@ defineProps({
       :value="modelValue"
       :id="label"
       placeholder=" "
+      :type="type"
       @input="$emit('update:modelValue', $event.target.value)"
       class="input__field"
     />
