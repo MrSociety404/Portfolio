@@ -28,6 +28,10 @@ const routes = [
     name: "Project",
     component: () => import("../views/Project.vue"),
   },
+  {
+    path: "/:pathMatch(.*)*",
+    component: () => import("../views/Error.vue"),
+  },
 ];
 
 const router = createRouter({
