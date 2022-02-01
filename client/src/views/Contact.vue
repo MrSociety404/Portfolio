@@ -24,6 +24,7 @@ import Mail from "../assets/svg/mail.svg"
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
   @media (max-width: $sm) {
     padding-inline: 0;
   }

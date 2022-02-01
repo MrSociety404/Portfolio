@@ -1,18 +1,53 @@
 <script setup>
+import axios from 'axios';
 import { ref } from 'vue';
+import { validateEmail } from '../../features/utils';
 
+// Components
 import Button from '../Common/Button.vue';
 import Input from './Input.vue';
 import TextArea from './TextArea.vue';
+import Alert from '../Common/Alert.vue';
+
+// Variables
 const userInput = ref({
   name: '',
   mail: '',
   message: ''
 })
+
+const alertMessage = ref({
+  isOpen: false,
+  message: '',
+  title: '',
+  error: true,
+})
+
+// Logic
+const sendMail = async () => {
+  const res = await axios.post('mailbox', userInput.value);
+  console.log(res);
+}
+
+const submit = () => {
+  if (userInput.value.name.trim() && userInput.value.mail.trim() && userInput.value.message.trim()) {
+    if (validateEmail(userInput.value.mail)) {
+      sendMail()
+    } else {
+      alertMessage.value.message = 'L\'adresse mail fournie n\'est pas correcte !'
+      alertMessage.value.title = 'Adresse mail incorrect'
+      alertMessage.value.isOpen = true
+    }
+  } else {
+    alertMessage.value.message = 'Tous les champs doivent être remplis !'
+    alertMessage.value.title = 'Champ manquant !'
+    alertMessage.value.isOpen = true
+  }
+}
 </script>
 
 <template>
-  <form @submit.prevent class="contact__form">
+  <form @submit.prevent="submit" class="contact__form">
     <h1 class="contact__title">Parlons ensemble</h1>
     <p class="contact__desc">Ecrivez moi votre message.</p>
     <div class="contact__box">
@@ -25,6 +60,13 @@ const userInput = ref({
       <a href="mailto:info@fabricecst.com" class="contact__mailLink">info@fabricecst.com</a>
     </div>
   </form>
+  <transition name="popup" appear>
+    <Alert
+      v-if="alertMessage.isOpen"
+      @closePopup="alertMessage.isOpen = false"
+      :alertInfo="alertMessage"
+    />
+  </transition>
 </template>
 
 <style lang="scss">

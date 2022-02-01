@@ -12,6 +12,13 @@
   animation: appearFromBottomSmall 0.3s ease-out reverse;
 }
 
+.popup-enter-active {
+  animation: popupAnim 0.2s ease-in;
+}
+.popup-leave-active {
+  animation: popupAnim 0.2s ease-in reverse;
+}
+
 @keyframes fromLeft {
   from {
     transform: translateX(500px);
@@ -20,7 +27,6 @@
     transform: translateX(0);
   }
 }
-
 @keyframes appearFromTopSmall {
   from {
     transform: translateY(-20px);
@@ -67,5 +73,15 @@
   }
   100% {
     transform: translateY(0px);
+  }
+}
+@keyframes popupAnim {
+  from {
+    right: -50vw;
+    opacity: 0;
+  }
+  to {
+    right: 0;
+    opacity: 1;
   }
 }
