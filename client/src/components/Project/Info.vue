@@ -14,7 +14,7 @@ defineProps({
 <template>
   <section class="projectInfo">
     <h2 class="projectInfo__title">{{ title }}</h2>
-    <p class="projectInfo__content">{{ content }}</p>
+    <p class="projectInfo__content" v-html="content" />
   </section>
 </template>
 
@@ -42,6 +42,9 @@ defineProps({
     line-height: 2rem;
     @media (max-width: $lg) {
       width: unset;
+    }
+    & a {
+      font-weight: bold;
     }
   }
 }

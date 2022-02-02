@@ -32,8 +32,8 @@ onBeforeMount(async () => {
     <Intro :title="project.title" :status="project.status" :preview="project.preview" />
     <Description :desc="project.description" :info="project.info" />
     <Info title="Role" :content="project.role" />
-    <Info title="Comment" :content="project.technology" />
-    <Info title="Appris" :content="project.learning" />
+    <Info title="Technologies" :content="project.technology" />
+    <Info title="Apprentissage" :content="project.learning" />
     <Previews :images="project.images" />
   </main>
   <main v-else class="projectLoad">Loading...</main>
