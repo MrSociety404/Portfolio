@@ -15,10 +15,10 @@
   ],
   "author": "MrSociety404",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "vite build",
-    "preview": "vite build && vite preview",
-    "start": "vite preview"
+    "preview": "vite preview --host",
+    "start": "yarn build && yarn preview"
   },
   "dependencies": {
     "axios": "^0.25.0",
