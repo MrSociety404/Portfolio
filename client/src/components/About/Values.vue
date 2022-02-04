@@ -11,7 +11,7 @@ const values = [
   },
   {
     title: "Passion avant l'argent",
-    content: "Il est évident que je ne pourrai pas uniquement vivre d'amour et d'eau fraiche, c'est avant tout la passion qui m'anime. "
+    content: "Il est évident que je ne pourrai pas uniquement vivre d'amour et d'eau fraiche mais c'est avant tout la passion qui m'anime. "
   },
   {
     title: "Optimisation",

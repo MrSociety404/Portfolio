@@ -36,6 +36,7 @@ defineProps({
             href="https://github.com/MrSociety404"
             class="footer_link"
             aria-label="my github profile"
+            target="_blank"
           >
             <Github />
           </a>
@@ -45,6 +46,7 @@ defineProps({
             href="https://www.linkedin.com/in/fabrice-cst-29878821b/"
             class="footer_link"
             aria-label="my linkedin profile"
+            target="_blank"
           >
             <Linkedin />
           </a>

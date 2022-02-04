@@ -17,7 +17,7 @@ defineProps({
     <div class="projectDesc__container">
       <div class="projectDesc__box">
         <span class="projectDesc__title">Site</span>
-        <a :href="info.url" class="projectDesc__content">{{ info.url }}</a>
+        <a :href="info.url" target="_blank" class="projectDesc__content">{{ info.url }}</a>
       </div>
       <div class="projectDesc__box">
         <span class="projectDesc__title">Date du projet</span>
