@@ -44,7 +44,7 @@ defineProps({
       width: unset;
     }
     & a {
-      font-weight: bold;
+      text-decoration: underline;
     }
   }
 }

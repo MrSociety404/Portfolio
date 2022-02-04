@@ -9,7 +9,7 @@
     </h2>
     <p
       class="aboutWho__content"
-    >Je suis Fabrice, un jeune développeur web belge intéressé par les applications full stack. J'apprends beaucoup par moi-même. J'ai néanmoins étudié l'informatique & formation à BeCode Liège où j'ai pu perfectionner mes compétences</p>
+    >Je suis Fabrice, un jeune développeur web belge intéressé par les applications full stack. J'apprends beaucoup en autodidacte. J'ai néanmoins étudié l'informatique & réalisé une formation à BeCode Liège où j'ai pu perfectionner mes compétences</p>
   </section>
 </template>
 

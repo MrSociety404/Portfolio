@@ -7,7 +7,7 @@ import Button from '../Common/Button.vue';
   <section class="homeAbout">
     <p
       class="homeAbout__text"
-    >J'ai la chance de travailler par passion et de créer de superbes applications web au travers de mes valeurs et conviction.</p>
+    >J'ai la chance de travailler par passion et de créer de superbes applications web en accord avec mes valeurs et convictions.</p>
     <Button content="À propos de moi" class="homeAbout__button" @click="$router.push('/about')" />
   </section>
 </template>

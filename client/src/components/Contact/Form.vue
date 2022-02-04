@@ -56,7 +56,7 @@ const submit = () => {
 <template>
   <form @submit.prevent="submit" class="contact__form">
     <h1 class="contact__title">Parlons ensemble</h1>
-    <p class="contact__desc">Ecrivez moi votre message.</p>
+    <p class="contact__desc">Ecrivez-moi votre message.</p>
     <div class="contact__box">
       <Input label="Nom" v-model="userInput.name" />
       <Input label="Mail" v-model="userInput.mail" type="email" />

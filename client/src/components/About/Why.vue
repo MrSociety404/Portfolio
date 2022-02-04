@@ -7,7 +7,7 @@
     <h2 class="aboutWhy__title">Pourquoi travailer avec moi</h2>
     <p
       class="aboutWhy__content"
-    >Dès l'instant où j'écris ma première ligne de code, j'ai trouvé une passion et un besoin de créer, découvrir et aider les personnes qui ont besoin d'une solution digitale 💻. J'ai choisi ma voie dans ce secteur et mon expertise grandit d'année en année ⚡</p>
+    >Dès l'instant où j'ai écrit ma première ligne de code, une passion est née. Créer, découvrir et aider les personnes qui ont besoin d'une solution digitale est devenu un besoin. 💻. J'ai choisi ma voie dans ce secteur et mon expertise grandit d'année en année ⚡</p>
   </section>
 </template>
 

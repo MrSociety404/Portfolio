@@ -14,7 +14,7 @@ defineProps({
   },
   subtitle: {
     type: String,
-    default: 'Parlons en ensemble'
+    default: 'Parlons-en ensemble'
   }
 })
 </script>

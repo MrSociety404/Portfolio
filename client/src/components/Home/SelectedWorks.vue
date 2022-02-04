@@ -19,7 +19,7 @@ onMounted(() => {
 <template>
   <section class="selectedWorks">
     <h2 class="selectedWorks__title">
-      <span ref="title">Projets Sélectionné</span>
+      <span ref="title">Projets Sélectionnés</span>
     </h2>
     <Suspense>
       <template #default>

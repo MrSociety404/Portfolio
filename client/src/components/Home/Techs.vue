@@ -11,7 +11,7 @@ import TechListSkeleton from './TechListSkeleton.vue';
       <h2 class="techs__title">Mes technologies du moment</h2>
       <p
         class="techs__desc"
-      >J'adore découvrir beaucoup de technologies. Néanmoins, il viens un moment ou je dois en choisir quelqu'un pour mes projects. Ceux-ci sont certaine technologies que j'ai retenu</p>
+      >J'adore découvrir de nouvelles technologies. Néanmoins, il vient un moment où il faut en choisir quelqu'unes pour mes projects. En voici certaines que j'affectionne particulièrement</p>
       <Button content="Voir des exemples" class="techs__button" @click="$router.push('/works')" />
     </div>
     <Suspense>
@@ -56,9 +56,9 @@ import TechListSkeleton from './TechListSkeleton.vue';
     }
   }
   &__desc {
-    font-size: 1rem;
+    font-size: 1.1rem;
     text-align: justify;
-    line-height: 1.5rem;
+    line-height: 1.8rem;
     margin-bottom: 2rem;
     @media (max-width: $lg) {
       text-align: center;

@@ -7,15 +7,15 @@ import Opti from "../../assets/svg/opti.svg"
 const values = [
   {
     title: "Travail quotidien",
-    content: "Un besoin continu d'apprendre de nouvelles choses me motive à travailler tous les jours"
+    content: "Un besoin constant d'apprendre de nouvelles choses me motive à travailler tous les jours"
   },
   {
     title: "Passion avant l'argent",
-    content: "Oui, je travaille par passion et j'aime mon travail.C'est un mensonge de dire que l\'argent n\'a pas d\'importance pour moi mais ce n\'est pas mon objectif principal"
+    content: "Il est évident que je ne pourrai pas uniquement vivre d'amour et d'eau fraiche, c'est avant tout la passion qui m'anime. "
   },
   {
     title: "Optimisation",
-    content: "Le vert n'est pas ma couleur préférée, mais j'adore voir cette couleur dans tous mes scores Google Lighthouse. C'est un objectif pour moi"
+    content: "Bien que le vert ne soit pas ma couleur préférée, il faut quand même bien avouer que sur un score lighthouse ou sur un logo en forme de ' V '; c'est beau."
   },
 ]
 
