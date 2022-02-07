@@ -59,7 +59,7 @@ const submit = () => {
     <p class="contact__desc">Ecrivez-moi votre message.</p>
     <div class="contact__box">
       <Input label="Nom" v-model="userInput.name" />
-      <Input label="Mail" v-model="userInput.mail" type="email" />
+      <Input label="Mail" v-model="userInput.mail" />
     </div>
     <TextArea v-model="userInput.message" />
     <div class="contact__controls">

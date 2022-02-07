@@ -26,7 +26,7 @@ defineProps({
         <h2 class="footer__title">{{ title }}</h2>
         <h3 class="footer__subtitle">{{ subtitle }}</h3>
       </div>
-      <Button :inverted="true" content="Contactez moi" @click="$router.push('contact')" />
+      <Button :inverted="true" content="Contactez moi" @click="$router.push('/contact')" />
     </div>
     <div class="footer__container">
       <p class="footer__info">© 2022| Tous droits réservés.</p>
