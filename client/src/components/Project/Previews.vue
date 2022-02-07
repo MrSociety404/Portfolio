@@ -37,7 +37,7 @@ defineProps({
   &__previews {
     width: 60%;
     @media (max-width: $lg) {
-      width: unset;
+      width: 100%;
     }
     & img {
       display: block;

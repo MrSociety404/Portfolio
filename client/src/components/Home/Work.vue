@@ -57,6 +57,7 @@ defineProps({
   }
   &__image {
     object-fit: cover;
+    object-position: top;
     margin-bottom: 2rem;
     transition: transform 0.4s ease;
     max-height: 400px;
