@@ -18,7 +18,7 @@ mongoose
   .connect(process.env.MONGO_URI as string)
   .then(() => {
     // Confirm DB connection
-    console.log("[\x1b[36mINFO\x1b[37m] MongoDB Connected");
+    console.log("[\x1b[36mINFO\x1b[37m]  MongoDB Connected");
 
     const app = express();
 
