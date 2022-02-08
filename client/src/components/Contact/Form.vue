@@ -22,6 +22,8 @@ const alertMessage = ref({
   title: '',
   error: true,
 })
+const isLoading = ref(false)
+
 
 // Logic
 const sendMail = async () => {
@@ -31,6 +33,7 @@ const sendMail = async () => {
     alertMessage.value.title = 'Message envoyé !'
     alertMessage.value.error = false
     alertMessage.value.isOpen = true
+    isLoading.value = false
   } catch (err) {
     console.error(err);
   }
@@ -40,6 +43,7 @@ const submit = () => {
   if (userInput.value.name.trim() && userInput.value.mail.trim() && userInput.value.message.trim()) {
     if (validateEmail(userInput.value.mail)) {
       sendMail()
+      isLoading.value = !isLoading.value
     } else {
       alertMessage.value.message = 'L\'adresse mail fournie n\'est pas correcte !'
       alertMessage.value.title = 'Adresse mail incorrect'
@@ -63,7 +67,7 @@ const submit = () => {
     </div>
     <TextArea v-model="userInput.message" />
     <div class="contact__controls">
-      <Button content="Envoyer" :inverted="true" />
+      <Button content="Envoyer" :inverted="true" :loading="isLoading" />
       <a href="mailto:info@fabricecst.com" class="contact__mailLink">info@fabricecst.com</a>
     </div>
   </form>

@@ -1,9 +1,15 @@
 <script setup>
-defineProps(['content', 'inverted'])
+defineProps(['content', 'inverted', 'loading'])
 </script>
 
 <template>
-  <button :class="`button ${inverted ? 'inverted' : ''}`">{{ content }}</button>
+  <button
+    :class="`button ${inverted ? 'inverted' : ''} ${loading ? 'loading' : ''} `"
+    :disabled="loading"
+  >
+    <div v-if="loading" class="loader"></div>
+    <span v-else>{{ content }}</span>
+  </button>
 </template>
 
 <style lang="scss">
@@ -35,6 +41,10 @@ defineProps(['content', 'inverted'])
       background-color: themed("primary");
       color: themed("secondary");
     }
+  }
+  &.loading {
+    cursor: not-allowed;
+    opacity: 0.5;
   }
   &:hover {
     transform: scale(1.025);
