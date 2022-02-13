@@ -49,6 +49,7 @@ onMounted(() => {
     transform-origin: center;
     transition: transform 0.4s ease-out;
     display: block;
+    overflow: hidden;
     @media (max-width: $md) {
       width: 100%;
       height: 60vw;
