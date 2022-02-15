@@ -4,7 +4,7 @@
 
 ## What I use ?
 
-- <img src="https://v3.vuejs.org/logo.png" alt="vue" style="width: 16px" /> [Vue 3.2](https://v3.vuejs.org/)
+- <img src="https://vuejs.org/logo.svg" alt="vue" style="width: 16px" /> [Vue 3.2](https://v3.vuejs.org/)
 - <img src="https://vitejs.dev/logo.svg" alt="vite" style="width: 16px" /> [Vite](https://vitejs.dev/)
 - <img src="https://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg" alt="vue" style="width: 16px" /> [Scss](https://sass-lang.com/)
 - <img src="https://www.typescriptlang.org/favicon-32x32.png?v=8944a05a8b601855de116c8a56d3b3ae" alt="vue" style="width: 16px" /> [TypeScript](https://www.typescriptlang.org/)
